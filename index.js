@@ -6,12 +6,12 @@ const PORT = 4001;
 // Use CORS middleware
 app.use(cors());
 
-app.get('/things', (req, res) => {
+app.get('/', (req, res) => {
     res.send("node express practice");
 });
 
-const array = [1, 3, 4, 5, 6, 7];
-app.get('/', (req, res) => {
+const array = [1, 2,3, 4, 5, 6, 7,9];
+app.get('/things', (req, res) => {
     array.sort((a, b) => a - b);
     console.warn(array);
     for (let i = 0; i < array.length; i++) {
